@@ -7,7 +7,7 @@ function SearchInput() {
         className="text-center text-[20px]
         text-gray-400 mb-3"
       >
-        Lets Search what you need
+        Lets Search a Car
       </h2>
       <div className="flex justify-center">
         <div className="flex bg-gray-100 p-1 px-5

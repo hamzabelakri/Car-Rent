@@ -3,14 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => (
-  <footer className="flex flex-col text-black-100  mt-5 border-t border-gray-100">
+  <footer className="flex flex-col text-black-100  bg-base-200 mt-5 border-t border-gray-100">
     <div className=" w-full flex md:justify-center flex-wrap max-md:mt-10 gap-40 sm:px-16 px-6 py-10">
       {footerLinks.map((item) => (
         <div
           key={item.title}
-          className="flex flex-col gap-6 text-base min-w-[170px]"
+          className="flex flex-col gap-6 text-base  min-w-[170px]"
         >
-          <h3 className="font-bold">{item.title}</h3>
+          <h3 className="font-bold text-[20px]">{item.title}</h3>
           <div className="flex flex-col gap-5">
             {item.links.map((link) => (
               <Link key={link.title} href={link.url} className="text-gray-500">
