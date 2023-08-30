@@ -1,6 +1,6 @@
 import request, { gql } from "graphql-request";
 
-const MASTER_URL = process.env.NEXT_PUBLIC_MASTER_URL;
+const URL = process.env.NEXT_PUBLIC_MASTER_URL;
 export const getCarsList = async () => {
   const query = gql`
     query CarLists {
@@ -22,7 +22,7 @@ export const getCarsList = async () => {
     }
   `;
 
-  const result = await request(MASTER_URL, query);
+  const result = await request(URL, query);
   return result;
 };
 
@@ -34,7 +34,7 @@ export const getStoreLocations = async () => {
       }
     }
   `;
-  const result = await request(MASTER_URL, query);
+  const result = await request(URL, query);
   return result;
 };
 
@@ -72,7 +72,7 @@ export const createBooking = async (formValue: any) => {
   
   `;
 
-  const result = await request(MASTER_URL, mutationQuery);
+  const result = await request(URL, mutationQuery);
   return result;
 };
 
@@ -96,6 +96,6 @@ export const contactUs = async (contactFormValue: any) => {
     }
   `;
 
-  const result = await request(MASTER_URL, mutationQuery);
+  const result = await request(URL, mutationQuery);
   return result;
 };
