@@ -1,6 +1,6 @@
 import request, { gql } from "graphql-request";
 
-const URL =process.env.NEXT_PUBLIC_MASTER_URL
+const URL ="https://api-us-east-1-shared-usea1-02.hygraph.com/v2/clltbrv6s38pc01ue4cfqc2zw/master";
 export const getCarsList = async () => {
   const query = gql`
     query CarLists {
