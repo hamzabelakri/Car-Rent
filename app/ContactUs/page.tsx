@@ -1,6 +1,6 @@
-import ContactForm from "@/components/ContactForm";
-import Image from "@/node_modules/next/image";
+import ContactForm from "@/components/ContactUs/ContactForm";
 import React from "react";
+import { contactMessageFlagContext } from "@/context/contactMessageFlagContext";
 
 const ContactUs = () => {
   return (
@@ -16,7 +16,7 @@ const ContactUs = () => {
 
         <div className="flex flex-wrap mt-12">
           <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:px-3 lg:mb-0 lg:w-5/12 lg:px-6">
-           <ContactForm/>
+            <ContactForm />
           </div>
           <div className="w-full shrink-0 grow-0 basis-auto lg:w-7/12">
             <div className="flex flex-wrap">
