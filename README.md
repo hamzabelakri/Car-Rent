@@ -1,6 +1,6 @@
 ## The Project
 
-A Full Stack [Next.js] 13 app for renting cars. Crafted with Tailwind CSS, GraphQL, HyGraph, and TypeScript, this application offers seamless car rental experiences. 
+A Full Stack Next.js 13 app for renting cars. Crafted with Tailwind CSS, GraphQL, HyGraph, and TypeScript, this application offers seamless car rental experiences. 
 
 Plus, it's powered by Clerk for secure and modern authentication. 
 
