@@ -6,7 +6,7 @@ import { Car, CarsListProps } from "@/common.types";
 
 function CarsList({carsList}: CarsListProps) {
   const [isLoaded, setIsLoaded] = useState(true);
-  const [selectedCar, setSelectedCar] = useState<Car | null>(null);
+  const [selectedCar, setSelectedCar] = useState<any>([]);
   useEffect(() => {
     if (carsList) {
       setIsLoaded(false);
