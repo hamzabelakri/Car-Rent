@@ -1,7 +1,6 @@
 import request, { gql } from "graphql-request";
 
-const URL =process.env.NEXT_PUBLIC_MASTER_URL;
-console.log(URL)
+const URL =process.env.NEXT_PUBLIC_MASTER_URL
 export const getCarsList = async () => {
   const query = gql`
     query CarLists {
