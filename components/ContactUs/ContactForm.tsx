@@ -1,51 +1,44 @@
 "use client";
+import { ContactFormValue } from "@/common.types";
 import { contactUs } from "@/services/index";
 import React, { useEffect, useState } from "react";
-import { contactMessageFlagContext } from "@/context/contactMessageFlagContext";
 import ContactToast from "./ContactToast";
 const ContactForm = () => {
-  const [showToastMsg,setShowToastMsg]=useState<boolean>(false);
+  const [showToastMsg, setShowToastMsg] = useState<boolean>(false);
 
-  const [contactFormValue, setContactFormValue] = useState({
+  const [contactFormValue, setContactFormValue] = useState<ContactFormValue>({
     name: "",
     email: "",
     message: "",
   });
 
   const handleChange = (event: any) => {
-    setContactFormValue({
-      ...contactFormValue,
+    setContactFormValue((prev) => ({
+      ...prev,
       [event.target.name]: event.target.value,
-    });
+    }));
   };
 
-  useEffect(()=>{
-    if(showToastMsg)
-    {
-      setTimeout(function(){
-        setShowToastMsg(false)
-      },4000);
-    }
-  },[showToastMsg])
-  const handleSubmit = async () => {
-   console.log(contactFormValue);
+  const handleSubmit = async (event: any) => {
+    //console.log(contactFormValue);
     const resp = await contactUs(contactFormValue);
-    if(resp)
-    {
+    if (resp) {
       setShowToastMsg(true);
+      setTimeout(() => {
+        setShowToastMsg(false);
+      }, 4000);
     }
-    console.log(resp);
+    //console.log(resp);
+    event.preventDefault();
     setContactFormValue({
-        name: "",
-        email: "",
-        message: "",
+      name: "",
+      email: "",
+      message: "",
     });
   };
   return (
-    
-
     <div>
-       {showToastMsg?<ContactToast  />:null}
+      {showToastMsg ? <ContactToast /> : null}
       <form>
         <div className="form-control">
           <label className="label">
@@ -97,8 +90,6 @@ const ContactForm = () => {
         </button>
       </form>
     </div>
-
-
   );
 };
 

@@ -1,12 +1,12 @@
+import { FormProps, FormValue, StoreLocation } from "@/common.types";
 import { BookCreatedFlagContext } from "@/context/BookCreatedFlagContext";
 import {  createBooking, getStoreLocations } from "@/services";
-import { useUser } from "@clerk/nextjs";
 import React, { useContext, useEffect, useState } from "react";
 
-function Form({car}:any) {
-  const [storeLocation, setStoreLocation] = useState<any>([]);
+function Form({car}:FormProps) {
+  const [storeLocation, setStoreLocation] = useState<StoreLocation[]>([]);
   const {showToastMsg,setShowToastMsg}=useContext(BookCreatedFlagContext)
-  const [formValue,setFormValue]=useState({
+  const [formValue,setFormValue]=useState<FormValue>({
     location:'',
     pickUpDate:'',
     dropOffDate:'',

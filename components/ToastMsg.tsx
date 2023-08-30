@@ -1,6 +1,7 @@
+import { ToastMsgProps } from '@/common.types'
 import React from 'react'
 
-function ToastMsg({msg}:any) {
+function ToastMsg({msg}:ToastMsgProps) {
   return (
     <div>
     <div className="toast toast-top toast-end">

@@ -1,7 +1,8 @@
+import { BookingModalProps } from '@/common.types'
 import CarCard from '../Home/CarCard'
 import Form from './Form'
 
-function BookingModal({car}:any) {
+function BookingModal({car}:BookingModalProps) {
 
   return (
     <form method="dialog" className="modal-box w-11/12 max-w-5xl">

@@ -1,11 +1,12 @@
 import { footerLinks } from "@/constants/index";
 import Image from "next/image";
 import Link from "next/link";
+import {FooterLink} from "@/common.types"
 
 const Footer = () => (
   <footer className="flex flex-col text-black-100  bg-base-200 mt-5 border-t border-gray-100">
     <div className=" w-full flex md:justify-center flex-wrap max-md:mt-10 gap-40 sm:px-16 px-6 py-10">
-      {footerLinks.map((item) => (
+      {footerLinks.map((item:FooterLink) => (
         <div
           key={item.title}
           className="flex flex-col gap-6 text-base  min-w-[170px]"

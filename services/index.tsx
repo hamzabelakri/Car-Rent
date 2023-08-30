@@ -1,6 +1,6 @@
 import request, { gql } from "graphql-request";
 
-const MASTER_URL =process.env.NEXT_PUBLIC_MASTER_URL
+const MASTER_URL = process.env.NEXT_PUBLIC_MASTER_URL;
 export const getCarsList = async () => {
   const query = gql`
     query CarLists {
@@ -87,7 +87,7 @@ export const contactUs = async (contactFormValue: any) => {
     email: "` +
     contactFormValue.email +
     `", 
-  message: "` +
+    message: "` +
     contactFormValue.message +
     `", 
     }) {
