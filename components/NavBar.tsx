@@ -28,18 +28,18 @@ function NavBar() {
           History
         </h2>
 
-        <h2
+     {/*    <h2
           className="hover:bg-blue-500
             px-3 cursor-pointer
             p-2 rounded-full hover:text-white"
         >
           Contact Us
-        </h2>
-        {/*  <Link href='./ContactUs'>
+        </h2> */}
+      <Link href='./ContactUs'>
             <h2 className='hover:bg-blue-500
             px-3 cursor-pointer
             p-2 rounded-full hover:text-white'
-            >Contact Us</h2></Link> */}
+            >Contact Us</h2></Link>
       </div>
       <UserButton />
     </div>
