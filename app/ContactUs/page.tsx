@@ -1,3 +1,4 @@
+import ContactForm from "@/components/ContactForm";
 import Image from "@/node_modules/next/image";
 import React from "react";
 
@@ -15,49 +16,7 @@ const ContactUs = () => {
 
         <div className="flex flex-wrap mt-12">
           <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:px-3 lg:mb-0 lg:w-5/12 lg:px-6">
-            <form>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Name</span>
-                </label>
-                <input
-                  type="text"
-                  placeholder="Name"
-                  className="input input-bordered"
-                />
-              </div>
-              
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Email Address</span>
-                </label>
-                <input
-                  type="text"
-                  placeholder="Email"
-                  className="input input-bordered"
-                />
-              </div>
-
-              <div className="form-control">
-              <label className="label">
-                  <span className="label-text">Message</span>
-                </label>
-              <textarea
-  className="mb-6 textarea textarea-bordered"
-  placeholder="Send a message..."
-  rows={3} 
-></textarea>   </div>
-
-
-              <button
-                type="button"
-                data-te-ripple-init
-                data-te-ripple-color="light"
-                className="mb-6 inline-block w-full rounded bg-blue-500 px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
-              >
-                Send
-              </button>
-            </form>
+           <ContactForm/>
           </div>
           <div className="w-full shrink-0 grow-0 basis-auto lg:w-7/12">
             <div className="flex flex-wrap">
@@ -89,7 +48,7 @@ const ContactUs = () => {
                       support@example.com
                     </p>
                     <p className="text-neutral-500 dark:text-neutral-200">
-                      +1 234-567-89
+                      +71 23 67 89
                     </p>
                   </div>
                 </div>
@@ -122,7 +81,7 @@ const ContactUs = () => {
                       sales@example.com
                     </p>
                     <p className="text-neutral-500 dark:text-neutral-200">
-                      +1 234-567-89
+                      +71 23 67 89
                     </p>
                   </div>
                 </div>
@@ -153,7 +112,7 @@ const ContactUs = () => {
                       press@example.com
                     </p>
                     <p className="text-neutral-500 dark:text-neutral-200">
-                      +1 234-567-89
+                      +71 23 67 89
                     </p>
                   </div>
                 </div>
@@ -184,7 +143,7 @@ const ContactUs = () => {
                       bugs@example.com
                     </p>
                     <p className="text-neutral-500 dark:text-neutral-200">
-                      +1 234-567-89
+                      +71 23 67 89
                     </p>
                   </div>
                 </div>
